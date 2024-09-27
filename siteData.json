@@ -7,6 +7,7 @@
       "headings": {
         "about-us": "About Us",
         "project-team": "Project team",
+        "vangmay-sachan": "Vangmay Sachan",
         "muhammad-zaidan-bin-sani": "Muhammad ZAIDAN bin Sani",
         "jane-doe": "Jane Doe",
         "jae-choi": "Jae Choi",
@@ -154,16 +155,16 @@
       "headingKeywords": {}
     },
     {
-      "src": "team/johndoe.md",
-      "title": "John Doe's Project Portfolio Page",
+      "src": "team/rxchell.md",
+      "title": "Rachel's Project Portfolio Page",
       "headings": {
-        "project-addressbook-level-3": "Project: AddressBook Level 3"
+        "project-doctrack": "Project: DocTrack"
       },
       "headingKeywords": {}
     },
     {
-      "src": "team/rxchell.md",
-      "title": "Rachel's Project Portfolio Page",
+      "src": "team/vangmay.md",
+      "title": "Vangmay's Project Portfolio Page",
       "headings": {
         "project-doctrack": "Project: DocTrack"
       },
