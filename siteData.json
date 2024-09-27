@@ -9,7 +9,7 @@
         "project-team": "Project team",
         "muhammad-zaidan-bin-sani": "Muhammad ZAIDAN bin Sani",
         "jane-doe": "Jane Doe",
-        "johnny-doe": "Johnny Doe",
+        "jae-choi": "Jae Choi",
         "jean-doe": "Jean Doe",
         "james-doe": "James Doe",
         "rachel-tai": "Rachel Tai",
@@ -134,6 +134,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/choiwab.md",
+      "title": "Jae's Project Portfolio Page",
+      "headings": {
+        "jae": "Jae"
       },
       "headingKeywords": {}
     },
