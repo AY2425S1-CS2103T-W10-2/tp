@@ -11,7 +11,8 @@
         "jane-doe": "Jane Doe",
         "johnny-doe": "Johnny Doe",
         "jean-doe": "Jean Doe",
-        "james-doe": "James Doe"
+        "james-doe": "James Doe",
+        "jo-an": "Jo An"
       },
       "headingKeywords": {}
     },
@@ -132,6 +133,14 @@
       "title": "",
       "headings": {
         "addressbook-level-3": "AddressBook Level-3"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "team/jayjay19630.md",
+      "title": "Jo An's Project Portfolio Page",
+      "headings": {
+        "project-doctrack": "Project: DocTrack"
       },
       "headingKeywords": {}
     },
