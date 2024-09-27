@@ -9,10 +9,7 @@
         "project-team": "Project team",
         "vangmay-sachan": "Vangmay Sachan",
         "muhammad-zaidan-bin-sani": "Muhammad ZAIDAN bin Sani",
-        "jane-doe": "Jane Doe",
         "jae-choi": "Jae Choi",
-        "jean-doe": "Jean Doe",
-        "james-doe": "James Doe",
         "rachel-tai": "Rachel Tai",
         "jo-an": "Jo An"
       },
@@ -142,7 +139,7 @@
       "src": "team/choiwab.md",
       "title": "Jae's Project Portfolio Page",
       "headings": {
-        "jae": "Jae"
+        "project-doctrack": "Project: DocTrack"
       },
       "headingKeywords": {}
     },
@@ -172,7 +169,7 @@
     },
     {
       "src": "team/zaidansani.md",
-      "title": "John Doe's Project Portfolio Page",
+      "title": "Zaidan's Project Portfolio Page",
       "headings": {
         "project-doctrack": "Project: DocTrack"
       },

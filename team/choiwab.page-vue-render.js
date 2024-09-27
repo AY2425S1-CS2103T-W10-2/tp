@@ -5,9 +5,9 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 };
     var pageVueStaticRenderFns = [function anonymous(
 ) {
-with(this){return _c('div',{attrs:{"id":"content-wrapper"}},[_c('h3',{attrs:{"id":"jae"}},[_v("Jae"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#jae","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_v("DocTrack is a desktop address book application used for ... The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about ... kLoC.")]),_v(" "),_c('p',[_v("Given below are my contributions to the project.")])])}
+with(this){return _c('div',{attrs:{"id":"content-wrapper"}},[_c('h3',{attrs:{"id":"project-doctrack"}},[_v("Project: DocTrack"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#project-doctrack","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_c('strong',[_v("DocTrack")]),_v(" helps general practitioners (GPs) at small clinics quickly access patient contact details, appointments, and treatment records. It is optimized for users who prefer a command-line interface (CLI), enabling faster completion of frequent tasks through typed commands.")]),_v(" "),_c('hr'),_v(" "),_c('p',[_v("Given below are my contributions to the project.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Fri, 27 Sept 2024, 20:23:57 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Fri, 27 Sept 2024, 21:28:04 GMT+8]")])])])}
 }];
   
