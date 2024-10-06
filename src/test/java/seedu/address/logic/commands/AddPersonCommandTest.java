@@ -50,7 +50,8 @@ public class AddPersonCommandTest {
         AddPersonCommand AddPersonCommand = new AddPersonCommand(validPerson);
         ModelStub modelStub = new ModelStubWithPerson(validPerson);
 
-        assertThrows(CommandException.class, AddPersonCommand.MESSAGE_DUPLICATE_PERSON, () -> AddPersonCommand.execute(modelStub));
+        assertThrows(CommandException.class, AddPersonCommand.MESSAGE_DUPLICATE_PERSON, 
+                () -> AddPersonCommand.execute(modelStub));
     }
 
     @Test
@@ -79,9 +80,9 @@ public class AddPersonCommandTest {
 
     @Test
     public void toStringMethod() {
-        AddPersonCommand AddPersonCommand = new AddPersonCommand(ALICE);
+        AddPersonCommand addPersonCommand = new AddPersonCommand(ALICE);
         String expected = AddPersonCommand.class.getCanonicalName() + "{toAdd=" + ALICE + "}";
-        assertEquals(expected, AddPersonCommand.toString());
+        assertEquals(expected, addPersonCommand.toString());
     }
 
     /**
