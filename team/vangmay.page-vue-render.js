@@ -8,6 +8,6 @@ with(this){return _c('div',{attrs:{"id":"app"}},[_c('header',{attrs:{"sticky":""
 with(this){return _c('div',{attrs:{"id":"content-wrapper"}},[_c('h3',{attrs:{"id":"project-doctrack"}},[_v("Project: DocTrack"),_c('a',{staticClass:"fa fa-anchor",attrs:{"href":"#project-doctrack","onclick":"event.stopPropagation()"}})]),_v(" "),_c('p',[_c('strong',[_v("DocTrack")]),_v(" helps general practitioners (GPs) at small clinics quickly access patient contact details, appointments, and treatment records. It is optimized for users who prefer a command-line interface (CLI), enabling faster completion of frequent tasks through typed commands.")]),_v(" "),_c('hr'),_v(" "),_c('p',[_v("Given below are my contributions to the project:")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 16 Oct 2024, 17:39:36 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Wed, 16 Oct 2024, 19:32:08 GMT+8]")])])])}
 }];
   
