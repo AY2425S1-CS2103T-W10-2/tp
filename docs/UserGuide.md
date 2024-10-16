@@ -4,9 +4,13 @@
   pageNav: 3
 ---
 
-# AB-3 User Guide
+![](images/doctrack.png)
+# User Guide
 
-AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized for use via a  Line Interface** (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps.
+DocTrack is a desktop application for general practitioners (GPs) to quickly 
+access patient contact details, appointments, and treatment records.
+If you type fast, this application can serve as an excellent substitute
+for your large medical files.
 
 <!-- * Table of Contents -->
 <page-nav-print />
@@ -15,30 +19,43 @@ AddressBook Level 3 (AB3) is a **desktop app for managing contacts, optimized fo
 
 ## Quick start
 
-1. Ensure you have Java `17` or above installed in your Computer.
+1. Ensure you have Java `17` or above installed in your computer.
+- To install Java 17, download Java [here](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
+- To check your Java version, refer [here](https://www.java.com/en/download/help/version_manual.html#).
 
-1. Download the latest `.jar` file from [here](https://github.com/se-edu/addressbook-level3/releases).
+2. Download our latest release file from [here](https://github.com/se-edu/addressbook-level3/releases). It is a `.jar` file.
 
-1. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
+3. Copy the file to the folder you want to use as the _home folder_ for your DocTrack.
 
-1. Open a command terminal, `cd` into the folder you put the jar file in, and use the `java -jar addressbook.jar` command to run the application.<br>
-   A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
+4. Open a command terminal of your preference, and run the commands:
+    ```
+    cd HOME_FOLDER
+    java -jar DocTrack.jar
+   ```
+    For example, if you copied `DocTrack.jar` into the folder `C:/Users/user/Documents`,
+    run the commands:
+    ```
+   cd C:/Users/user/Documents
+   java -jar DocTrack.jar
+   ```
+
+5. A GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/Ui.png)
 
-1. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
+6. Type the command in the command box, indicated by `Enter Command Here`
+   and press Enter to execute it. 
+
+    e.g. typing **`help`** and pressing Enter will open the help window.<br>
+   
    Some example commands you can try:
 
    * `list` : Lists all contacts.
-
-   * `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to the Address Book.
-
+   * `add person n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named `John Doe` to the Address Book.
    * `delete 3` : Deletes the 3rd contact shown in the current list.
-
    * `clear` : Deletes all contacts.
-
    * `exit` : Exits the app.
 
-1. Refer to the [Features](#features) below for details of each command.
+7. Refer to the [Features](#features) below for details of each command.
 
 --------------------------------------------------------------------------------------------------------------------
 
