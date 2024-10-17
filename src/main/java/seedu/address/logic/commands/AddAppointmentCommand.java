@@ -21,7 +21,7 @@ import seedu.address.model.person.Person;
  * Adds an appointment to the appointment book.
  */
 public class AddAppointmentCommand extends AddCommand {
-    public static final String COMMAND_WORD = "add appt";
+    public static final String COMMAND_WORD = "add appt ";
     public static final String MESSAGE_USAGE = COMMAND_WORD
             + ": Adds an appointment to the appointment book. \n"
             + "Parameters: "
@@ -31,10 +31,10 @@ public class AddAppointmentCommand extends AddCommand {
             + PREFIX_SICKNESS + "Sickness "
             + PREFIX_MEDICINE + "Medicine \n"
             + "Example: " + COMMAND_WORD
-            + PREFIX_APPOINTMENT_TYPE + "Check up"
-            + PREFIX_DATETIME + "2024-10-16 12:30:30"
-            + PREFIX_PERSON_ID + "1"
-            + PREFIX_SICKNESS + "Common Cold"
+            + PREFIX_APPOINTMENT_TYPE + "Check up "
+            + PREFIX_DATETIME + "2024-10-16 12:30:30 "
+            + PREFIX_PERSON_ID + "1 "
+            + PREFIX_SICKNESS + "Common Cold "
             + PREFIX_MEDICINE + "Paracetamol";
 
     public static final String MESSAGE_SUCCESS = "New appointment added: %1$s";
