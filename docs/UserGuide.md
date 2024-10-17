@@ -171,11 +171,62 @@ Examples:
 
 ### Appointment Commands
 
+An **appointment** is defined by several fields: an appointment type, appointment date & time, ID of the patient who is associated with the appointment, sickness, and medicine.  You can interact with appointments in DocTrack using the instructions below:
+
 <br>
 
-TODO: Add appointment commands here.
+##### Adding an appointment: `add appt`
 
+Adds an appointment to the DocTrack system. 
+
+Format: `add appt i/PATIENT_ID d/DATE_TIME ty/APPOINTMENT_TYPE s/SICKNESS m/MEDICINE`
+
+Examples:
+
+- `add appt i/John Doe d/2024-12-01 09:30 ty/Consulation s/Diabetes m/Insulin`
+- `add appt i/Jo An d/30/01/2024-12-01 16:40:00 ty/Follow-up s/Asthma m/Inhaler`
 ---
+
+<br>
+
+##### Listing all persons : `list appt`
+
+Shows a list of all appointments in the DocTrack system.
+
+Format: `list appt`
+
+<br>
+
+##### Editing a person : `edit appt`
+
+Edits an existing appointment in the system.
+
+Format: `edit appt INDEX [i/Jo An] [d/2024-12-01 11:30] [ty/Screening] [s/Asthma] [m/Inhaler]`
+
+- Edits the appointment at the specified `INDEX`.
+- At least one of the optional fields must be provided.
+- Existing values will be updated to the input values.
+
+Examples:
+
+- `edit appt 3 d/2024-12-05 13:00 m/Budesonide` Edits the date & time and the medicine to be `29/03/2025 10:30` and `Budesonide` respectively.
+
+<br>
+
+##### Deleting an appointment : `delete appt`
+
+Deletes the specified appointment from the system.
+
+Format: `delete appt INDEX`
+
+- Deletes the appointment at the specified `INDEX`.
+
+Examples:
+
+- `list appt` followed by `delete appt 2` deletes the 2nd appointment in the appointment book.
+
+<br>
+
 
 ### General Commands
 
