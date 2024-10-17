@@ -233,6 +233,13 @@ Furthermore, certain edits can cause the AddressBook to behave in unexpected way
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous AddressBook home folder.
 
+**Q**: What is JSON?<br>
+**A**: [JSON](https://www.json.org/json-en.html) files are used to store the data of patients and appointments.
+Examples:
+
+<img src="images/json/addressbook.png" alt="Address Book JSON" width="300" height="auto">
+<img src="images/json/appointmentBook.png" alt="Appointment Book JSON" width="300" height="auto">
+
 ---
 
 ## Known issues
