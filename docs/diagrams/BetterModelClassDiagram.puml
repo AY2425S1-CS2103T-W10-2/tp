@@ -4,10 +4,14 @@ skinparam arrowThickness 1.1
 skinparam arrowColor MODEL_COLOR
 skinparam classBackgroundColor MODEL_COLOR
 
+AppointmentBook *-left-> "1" UniqueAppointmentList
+UniqueAppointmentList *-down-> "1" Appointment
+Appointment *-left-> "1" Person
+
 AddressBook *-right-> "1" UniquePersonList
 AddressBook *-right-> "1" UniqueTagList
 UniqueTagList -[hidden]down- UniquePersonList
-UniqueTagList -[hidden]down- UniquePersonList
+UniqueTagList -[hidden]down- UniqueTagList
 
 UniqueTagList -right-> "*" Tag
 UniquePersonList -right-> Person
