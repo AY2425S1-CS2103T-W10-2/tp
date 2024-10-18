@@ -151,8 +151,16 @@ The `Model` component,
 <puml src="diagrams/StorageClassDiagram.puml" width="550" />
 
 The `Storage` component,
-* can save both address book data and user preference data in JSON format, and read them back into corresponding objects.
-* inherits from both `AddressBookStorage` and `UserPrefStorage`, which means it can be treated as either one (if only the functionality of only one is needed).
+* can save patient data, appointment data, and user preference data in JSON format, and read them back into corresponding objects.
+* Storage interface inherits from `AddressBookStorage`, `AppointmentBookStorage` and `UserPrefStorage`, which means it can be treated as either one (if only the functionality of only one is needed).
+* Patient data : 
+  * data is saved in `JsonAddressBookStorage` which inherits from interface `AddressBookStorage`.
+  * data is saved as `JsonSerializableAddressBook` which consists of `JsonAdaptedPerson` and `JsonAdaptedTag` which embodies the actual data of the individual patient and their data
+* Appointment data:
+  * data is saved in `JsonAppointmnetBookStorage` which inherits from interface `AppointmentBookStorage`.
+  * data is saved as `JsonSerializableAppointmentBook` which consists of `JsonAdaptedAppointment` which embodies the actual data of the individual patient and their data
+* User Preference data:
+    * data is saved in `UserPrefsStorage` interface and saves as `JsonUserPrefsStorage`
 * depends on some classes in the `Model` component (because the `Storage` component's job is to save/retrieve objects that belong to the `Model`)
 
 ### Common classes
