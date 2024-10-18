@@ -1,16 +1,17 @@
 package seedu.address.logic.commands;
 
+import java.util.function.Predicate;
+
 import seedu.address.logic.Messages;
 import seedu.address.model.Model;
-import seedu.address.model.person.NameContainsKeywordsPredicate;
+import seedu.address.model.person.Person;
 
 /**
  * Finds the person from the list of patients
  */
-public class FindPersonCommand extends FindCommand {
-    public static final String MESSAGE_SUCCESS = "Person has been found";
+public class FindPersonCommand extends FindCommand<Person> {
 
-    public FindPersonCommand(NameContainsKeywordsPredicate predicate) {
+    public FindPersonCommand(Predicate<Person> predicate) {
         super(predicate);
     }
 

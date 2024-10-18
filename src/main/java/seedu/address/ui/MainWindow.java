@@ -196,9 +196,9 @@ public class MainWindow extends UiPart<Stage> {
             logger.info("Result: " + commandResult.getFeedbackToUser());
             resultDisplay.setFeedbackToUser(commandResult.getFeedbackToUser());
 
-            if (commandText.trim().startsWith("list person")) {
+            if (commandText.trim().contains(" person")) {
                 showPersonListPanel();
-            } else if (commandText.trim().startsWith("list appt")) {
+            } else if (commandText.trim().contains(" appt")) {
                 showAppointmentListPanel();
             }
 
