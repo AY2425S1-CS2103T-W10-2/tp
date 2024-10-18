@@ -6,19 +6,26 @@ skinparam classBackgroundColor MODEL_COLOR
 
 Package Model as ModelPackage <<Rectangle>>{
 Class "<<interface>>\nReadOnlyAddressBook" as ReadOnlyAddressBook
+Class "<<interface>>\nReadOnlyAppointmentBook" as ReadOnlyAppointmentBook
 Class "<<interface>>\nReadOnlyUserPrefs" as ReadOnlyUserPrefs
 Class "<<interface>>\nModel" as Model
 Class AddressBook
+Class AppointmentBook
 Class ModelManager
 Class UserPrefs
 
 Class UniquePersonList
 Class Person
+Class PersonDescriptor
 Class Address
 Class Email
 Class Name
 Class Phone
 Class Tag
+
+Class UniqueAppointmentList
+Class Appointment
+Class AppointmentDescriptor
 
 Class I #FFFFFF
 }
@@ -29,20 +36,30 @@ HiddenOutside ..> Model
 AddressBook .up.|> ReadOnlyAddressBook
 
 ModelManager .up.|> Model
-Model .right.> ReadOnlyUserPrefs
+Model .down.> ReadOnlyUserPrefs
 Model .left.> ReadOnlyAddressBook
+Model .right.> ReadOnlyAppointmentBook
 ModelManager -left-> "1" AddressBook
-ModelManager -right-> "1" UserPrefs
+ModelManager -down-> "1" UserPrefs
+ModelManager -right-> "1" AppointmentBook
 UserPrefs .up.|> ReadOnlyUserPrefs
 
 AddressBook *--> "1" UniquePersonList
 UniquePersonList --> "~* all" Person
-Person *--> Name
-Person *--> Phone
-Person *--> Email
-Person *--> Address
-Person *--> "*" Tag
+Person *--> "1" PersonDescriptor
+PersonDescriptor *--> Name
+PersonDescriptor *--> Phone
+PersonDescriptor *--> Email
+PersonDescriptor *--> Address
+PersonDescriptor *--> "*" Tag
 
+AppointmentBook *--> "1" UniqueAppointmentList
+UniqueAppointmentList --> "~* all" Appointment
+Appointment *--> "1" AppointmentDescriptor
+AppointmentDescriptor *--> Person
+
+Appointment -[hidden]down--> I
+PersonDescriptor -[hidden]up--> I
 Person -[hidden]up--> I
 UniquePersonList -[hidden]right-> I
 
@@ -51,4 +68,5 @@ Phone -[hidden]right-> Address
 Address -[hidden]right-> Email
 
 ModelManager --> "~* filtered" Person
+ModelManager --> "~* filtered" Appointment
 @enduml
