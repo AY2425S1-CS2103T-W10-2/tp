@@ -14,7 +14,7 @@ import seedu.address.model.person.NameContainsKeywordsPredicate;
 /**
  * Parses input arguments and creates a new FindCommand object
  */
-public class FindCommandParser implements Parser<FindCommand> {
+public class FindCommandParser implements Parser<FindCommand<?>> {
 
     /**
      * Parses the given {@code String} of arguments in the context of the FindCommand
@@ -32,7 +32,27 @@ public class FindCommandParser implements Parser<FindCommand> {
                     String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
         }
 
-        String[] nameKeywords = trimmedArgs.split("\\s+");
+        String entityType = getEntity(trimmedArgs);
+        String[] keywords = getArgs(trimmedArgs);
+
+        switch (entityType) {
+        case PERSON_ENTITY_STRING:
+            return new FindPersonCommand(new NameContainsKeywordsPredicate(Arrays.asList(keywords)));
+        case APPOINTMENT_ENTITY_STRING:
+            return new FindAppointmentCommandParser().parse(trimmedArgs);
+        default:
+            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
+        }
+    }
+
+    private String getEntity(String args) {
+        String[] nameKeywords = args.split("\\s+");
+        String entityType = nameKeywords[0];
+        return entityType;
+    }
+
+    private String[] getArgs(String args) throws ParseException {
+        String[] nameKeywords = args.split("\\s+");
         String entityType = nameKeywords[0];
 
         nameKeywords = Arrays.copyOfRange(nameKeywords, 1, nameKeywords.length);
@@ -40,14 +60,10 @@ public class FindCommandParser implements Parser<FindCommand> {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
         }
 
-        switch (entityType) {
-        case PERSON_ENTITY_STRING:
-            return new FindPersonCommand(new NameContainsKeywordsPredicate(Arrays.asList(nameKeywords)));
-        case APPOINTMENT_ENTITY_STRING:
-            //TODO: Instantiate and return FindAppointmentCommand
-        default:
-            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
-        }
+        return nameKeywords;
     }
 
+    private String getArgString(String args) {
+        return args.substring(args.indexOf(' ') + 1);
+    }
 }

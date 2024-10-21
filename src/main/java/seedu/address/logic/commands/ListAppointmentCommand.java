@@ -11,12 +11,11 @@ public class ListAppointmentCommand extends ListCommand {
     public static final String MESSAGE_SUCCESS = "Listed all appointments!";
 
     /**
-     * Lists all appoinments in the appointment book to the user.*
+     * Lists all appointments in the appointment book to the user.*
      * @param model {@code Model} which the ListAppointmentCommand should operate on.
      * */
     @Override
     protected void listEntity(Model model) {
-
         model.updateFilteredAppointmentList(PREDICATE_SHOW_ALL_APPOINTMENTS);
     }
 

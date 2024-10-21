@@ -16,7 +16,6 @@ public class ListPersonCommand extends ListCommand {
      * */
     @Override
     protected void listEntity(Model model) {
-
         model.updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);
     }
 
