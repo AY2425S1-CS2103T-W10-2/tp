@@ -4,6 +4,7 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.nio.file.Path;
+import java.util.Comparator;
 import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
@@ -159,7 +160,9 @@ public class ModelManager implements Model {
      */
     @Override
     public ObservableList<Person> getFilteredPersonList() {
-        return filteredPersons;
+        return filteredPersons.sorted(
+            Comparator.comparing(Person::getName)
+        );
     }
 
     @Override
@@ -219,7 +222,9 @@ public class ModelManager implements Model {
      */
     @Override
     public ObservableList<Appointment> getFilteredAppointmentList() {
-        return filteredAppointments;
+        return filteredAppointments.sorted(
+            Comparator.comparing(Appointment::getAppointmentDateTime)
+        );
     }
 
     @Override
