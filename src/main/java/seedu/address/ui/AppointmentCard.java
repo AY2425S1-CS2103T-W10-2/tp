@@ -1,5 +1,7 @@
 package seedu.address.ui;
 
+import java.time.format.DateTimeFormatter;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -32,6 +34,8 @@ public class AppointmentCard extends UiPart<Region> {
     @FXML
     private Label appointmentId;
     @FXML
+    private Label personId;
+    @FXML
     private Label dateTime;
     @FXML
     private Label personName;
@@ -47,10 +51,13 @@ public class AppointmentCard extends UiPart<Region> {
     public AppointmentCard(Appointment appointment, int displayedIndex) {
         super(FXML);
         this.appointment = appointment;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy, hh:mm a");
+
         id.setText(displayedIndex + ". ");
         appointmentId.setText(String.valueOf(appointment.getAppointmentId()));
+        personId.setText(String.valueOf(appointment.getPersonID()));
         appointmentType.setText(appointment.getAppointmentType().value);
-        dateTime.setText(appointment.getAppointmentDateTime().toString());
+        dateTime.setText(appointment.getAppointmentDateTime().format(formatter));
         //TODO: don't talk to strangers
         personName.setText(appointment.getPerson().getName().fullName);
         sickness.setText(appointment.getSickness().value);

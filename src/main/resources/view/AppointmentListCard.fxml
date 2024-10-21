@@ -21,19 +21,32 @@
       <HBox spacing="0.5" alignment="CENTER_LEFT">
         <Label fx:id="id" styleClass="cell_big_label">
           <minWidth>
-            <!-- Ensures that the label text is never truncated -->
             <Region fx:constant="USE_PREF_SIZE" />
           </minWidth>
         </Label>
         <Label fx:id="appointmentType" text="\$first" styleClass="cell_big_label" />
-        <Region HBox.hgrow="ALWAYS" />
+        <Region HBox.hgrow="ALWAYS"/>
         <Label text="AID:" styleClass="cell_id_prefix_label"/>
         <Label fx:id="appointmentId" text="\$appointmentId" styleClass="cell_id_label" />
+        <Label text="PID:" styleClass="cell_id_prefix_label"/>
+        <Label fx:id="personId" text="\$personId" styleClass="cell_id_label" />
       </HBox>
-      <Label fx:id="dateTime" styleClass="cell_small_label" text="\$dateTime" />
-      <Label fx:id="personName" styleClass="cell_small_label" text="\$personName" />
-      <Label fx:id="sickness" styleClass="cell_small_label" text="\$sickness" />
-      <Label fx:id="medicine" styleClass="cell_small_label" text="\$medicine" />
+      <HBox spacing="5">
+        <Label styleClass="cell_small_label" text="Date/Time:" />
+        <Label fx:id="dateTime" styleClass="cell_small_label" text="\$dateTime" />
+      </HBox>
+      <HBox spacing="5">
+        <Label styleClass="cell_small_label" text="Patient Name:" />
+        <Label fx:id="personName" styleClass="cell_small_label" text="\$personName" />
+      </HBox>
+      <HBox spacing="5">
+        <Label styleClass="cell_small_label" text="Sickness:" />
+        <Label fx:id="sickness" styleClass="cell_small_label" text="\$sickness" />
+      </HBox>
+      <HBox spacing="5">
+        <Label styleClass="cell_small_label" text="Medicine:" />
+        <Label fx:id="medicine" styleClass="cell_small_label" text="\$medicine" />
+      </HBox>
     </VBox>
   </GridPane>
 </HBox>

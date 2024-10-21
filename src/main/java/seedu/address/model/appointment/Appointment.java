@@ -86,6 +86,10 @@ public class Appointment {
         return person;
     }
 
+    public int getPersonID() {
+        return person.getPersonId();
+    }
+
     public AppointmentType getAppointmentType() {
         return appointmentDescriptor.getAppointmentType();
     }
