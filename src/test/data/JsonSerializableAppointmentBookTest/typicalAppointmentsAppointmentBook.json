@@ -2,6 +2,7 @@
   "_comment": "AppointmentBook save file which contains typical Appointment values as in TypicalAppointments#getTypicalAppointmentBook()",
   "appointments": [
     {
+      "appointmentId": 0,
       "appointmentType": "Health Checkup",
       "appointmentDateTime": "2024-10-15T10:30:00",
       "personId": 1,
@@ -9,6 +10,7 @@
       "sickness": "Flu"
     },
     {
+      "appointmentId": 1,
       "appointmentType": "Dental Checkup",
       "appointmentDateTime": "2024-11-10T14:00:00",
       "personId": 2,
@@ -16,6 +18,7 @@
       "sickness": "Toothache"
     },
     {
+      "appointmentId": 2,
       "appointmentType": "Eye Exam",
       "appointmentDateTime": "2024-12-05T09:00:00",
       "personId": 3,
@@ -23,6 +26,7 @@
       "sickness": "Eye Strain"
     },
     {
+      "appointmentId": 3,
       "appointmentType": "Physical Therapy",
       "appointmentDateTime": "2024-10-20T11:15:00",
       "personId": 4,
@@ -30,6 +34,7 @@
       "sickness": "Back Pain"
     },
     {
+      "appointmentId": 4,
       "appointmentType": "Vaccination",
       "appointmentDateTime": "2024-11-25T16:00:00",
       "personId": 5,
@@ -37,6 +42,7 @@
       "sickness": "None"
     },
     {
+      "appointmentId": 5,
       "appointmentType": "Routine Checkup",
       "appointmentDateTime": "2024-12-01T08:30:00",
       "personId": 6,
@@ -44,6 +50,7 @@
       "sickness": "None"
     },
     {
+      "appointmentId": 6,
       "appointmentType": "Consultation",
       "appointmentDateTime": "2024-10-30T15:45:00",
       "personId": 7,

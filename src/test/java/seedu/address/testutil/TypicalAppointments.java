@@ -90,7 +90,7 @@ public class TypicalAppointments {
         .build();
 
     public static final Appointment APPOINTMENT_9 = new AppointmentBuilder()
-        .withAppointmentType("Surgery Consultation").withPerson(BOB)
+        .withAppointmentType("Surgery").withPerson(BOB)
         .withSickness("Pre-Surgery")
         .withMedicine("Pre-Meds")
         .withDateTime(DEFAULT_DATE_TIME_5)

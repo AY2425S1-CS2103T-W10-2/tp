@@ -1,6 +1,6 @@
 package seedu.address.testutil;
 
-import static seedu.address.testutil.TypicalPersons.ALICE_P;
+import static seedu.address.testutil.TypicalPersons.BOB;
 
 import java.time.LocalDateTime;
 
@@ -18,7 +18,7 @@ public class AppointmentBuilder {
     public static final String DEFAULT_APPOINTMENT_TYPE = "Health Checkup";
     public static final LocalDateTime DEFAULT_APPOINTMENT_DATE_TIME =
         LocalDateTime.of(2024, 10, 15, 10, 30);
-    public static final Person DEFAULT_PERSON = ALICE_P;
+    public static final Person DEFAULT_PERSON = BOB;
     public static final String DEFAULT_MEDICINE = "Panadol";
     public static final String DEFAULT_SICKNESS = "Flu";
 

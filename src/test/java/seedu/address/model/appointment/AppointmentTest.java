@@ -38,10 +38,6 @@ public class AppointmentTest {
             person1, new Sickness("Cold"), new Medicine("Aspirin"));
         appointment3 = new Appointment(new AppointmentType("Followup"), dateTime2,
             person2, new Sickness("Flu"), new Medicine("Tamiflu"));
-
-        System.out.println(appointment1);
-        System.out.println(appointment1);
-        System.out.println(appointment1);
     }
 
     @Test
