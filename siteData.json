@@ -138,12 +138,12 @@
         "quick-start": "Quick start",
         "interacting-with-doctrack": "Interacting with DocTrack",
         "command-overview": "Command Overview",
+        "summary-of-commands": "Summary of commands",
         "person-commands": "Person Commands",
         "appointment-commands": "Appointment Commands",
         "general-commands": "General Commands",
         "faq": "FAQ",
-        "known-issues": "Known issues",
-        "command-summary": "Command summary"
+        "known-issues": "Known issues"
       },
       "headingKeywords": {}
     },
