@@ -12,6 +12,10 @@ if () then ([command commits AddressBook])
     :Purge redundant states;
     :Save AddressBook to
     addressBookStateList;
+else if () then ([command commits AppointmentBook])
+    :Purge redundant states;
+    :Save AppointmentBook to
+    appointmentBookStateList;
 else ([else])
 endif
 stop
