@@ -32,7 +32,7 @@ LogicManager -right->"1" ParserClasses
 ParserClasses ..> XYZCommand : <<create>>
 
 XYZCommand -up-|> Command
-LogicManager .left.> Command : <<call>>
+LogicManager .left.> Command : <<executes>>
 
 LogicManager --> Model
 LogicManager --> Storage
@@ -42,6 +42,6 @@ Command .right.> Model
 note right of XYZCommand: XYZCommand = AddCommand, \nFindCommand, etc
 
 Logic ..> CommandResult
-LogicManager .down.> CommandResult
+LogicManager .down.> CommandResult : <<returns>>
 Command .up.> CommandResult : <<create>>
 @enduml
