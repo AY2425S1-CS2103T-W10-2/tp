@@ -560,6 +560,6 @@ with(this){return _c('h2',{attrs:{"id":"appendix-effort"}},[_c('strong',[_v("App
 with(this){return _c('ul',[_c('li',[_v("Keep it brief (~1 page)")]),_v(" "),_c('li',[_v("Explain the difficulty level, challenges faced, effort required, and achievements of the project.")]),_v(" "),_c('li',[_v("If a significant part (e.g., more than 5%) of the effort was saved through reuse, mention what you reused and how it affected the effort e.g., the feature X is implemented using library Foo -- our work on adapting Foo to our product is contained in class FooAdapter.java.")]),_v(" "),_c('li',[_v("Use AB3 as a reference point e.g., you can explain that while AB3 deals with only one entity type, your project was harder because it deals with multiple entity types.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Mon, 28 Oct 2024, 13:02:34 GMT+8]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 5.5.3")]),_v(", generated on Mon, 28 Oct 2024, 18:45:52 GMT+8]")])])])}
 }];
   
