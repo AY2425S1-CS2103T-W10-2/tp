@@ -1,0 +1,43 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant "e:ExitCommand" as ExitCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+[-> LogicManager : execute("exit")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("exit")
+activate AddressBookParser
+
+create ExitCommand
+AddressBookParser -> ExitCommand
+activate ExitCommand
+
+ExitCommand --> AddressBookParser
+deactivate ExitCommand
+
+AddressBookParser --> LogicManager : e
+deactivate AddressBookParser
+
+LogicManager -> ExitCommand : execute(e)
+activate ExitCommand
+
+create CommandResult
+ExitCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> ExitCommand
+deactivate CommandResult
+
+ExitCommand --> LogicManager : r
+deactivate ExitCommand
+
+[<--LogicManager
+deactivate LogicManager
+@enduml
