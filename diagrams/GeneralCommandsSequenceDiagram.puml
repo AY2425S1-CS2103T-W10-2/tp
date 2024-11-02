@@ -5,38 +5,40 @@ skinparam ArrowFontStyle plain
 box Logic LOGIC_COLOR_T1
 participant ":LogicManager" as LogicManager LOGIC_COLOR
 participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
-participant "e:ExitCommand" as ExitCommand LOGIC_COLOR
+participant "e:XYZCommand" as XYZCommand LOGIC_COLOR
 participant "r:CommandResult" as CommandResult LOGIC_COLOR
 end box
 
-[-> LogicManager : execute("exit")
+[-> LogicManager : execute("xyz")
 activate LogicManager
 
-LogicManager -> AddressBookParser : parseCommand("exit")
+LogicManager -> AddressBookParser : parseCommand("xyz")
 activate AddressBookParser
 
-create ExitCommand
-AddressBookParser -> ExitCommand
-activate ExitCommand
+create XYZCommand
+AddressBookParser -> XYZCommand
+activate XYZCommand
 
-ExitCommand --> AddressBookParser
-deactivate ExitCommand
+note right of XYZCommand: XYZCommand = \nExitCommand, HelpCommand
+
+XYZCommand --> AddressBookParser
+deactivate XYZCommand
 
 AddressBookParser --> LogicManager : e
 deactivate AddressBookParser
 
-LogicManager -> ExitCommand : execute(e)
-activate ExitCommand
+LogicManager -> XYZCommand : execute(e)
+activate XYZCommand
 
 create CommandResult
-ExitCommand -> CommandResult
+XYZCommand -> CommandResult
 activate CommandResult
 
-CommandResult --> ExitCommand
+CommandResult --> XYZCommand
 deactivate CommandResult
 
-ExitCommand --> LogicManager : r
-deactivate ExitCommand
+XYZCommand --> LogicManager : r
+deactivate XYZCommand
 
 [<--LogicManager
 deactivate LogicManager

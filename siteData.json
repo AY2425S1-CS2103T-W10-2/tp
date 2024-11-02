@@ -67,8 +67,6 @@
         "implementation-of-general-features": "Implementation of general features",
         "exit-feature": "Exit feature",
         "help-feature": "Help feature",
-        "proposed-features": "Proposed features",
-        "proposed-undo-redo-feature": "[Proposed] Undo/redo feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-data-storage-and-files": "Appendix: Data storage and files",
         "appendix-requirements": "Appendix: Requirements",
