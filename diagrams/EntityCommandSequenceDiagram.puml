@@ -1,0 +1,60 @@
+@startuml
+!include style.puml
+skinparam ArrowFontStyle plain
+
+box Logic LOGIC_COLOR_T1
+participant ":LogicManager" as LogicManager LOGIC_COLOR
+participant ":AddressBookParser" as AddressBookParser LOGIC_COLOR
+participant ":xyzCommandParser" as CommandParser LOGIC_COLOR
+participant "e:XYZCommand" as XYZCommand LOGIC_COLOR
+participant "r:CommandResult" as CommandResult LOGIC_COLOR
+end box
+
+[-> LogicManager : execute("xyz")
+activate LogicManager
+
+LogicManager -> AddressBookParser : parseCommand("xyz")
+
+create CommandParser
+activate AddressBookParser
+AddressBookParser -> CommandParser
+activate CommandParser
+AddressBookParser <-- CommandParser
+deactivate CommandParser
+
+
+
+AddressBookParser -> CommandParser : parse("xyz")
+activate CommandParser
+
+
+create XYZCommand
+CommandParser -> XYZCommand
+activate XYZCommand
+
+note right of XYZCommand: XYZCommand = \nFindEntityCommand, \nAddEntityCommand, \nDeleteEntityCommand, \nEditEntityCommand, \nClearEntityCommand, \nListEntityCommand
+
+XYZCommand --> CommandParser
+CommandParser --> AddressBookParser
+deactivate CommandParser
+deactivate XYZCommand
+
+AddressBookParser --> LogicManager : e
+deactivate AddressBookParser
+
+LogicManager -> XYZCommand : execute(e)
+activate XYZCommand
+
+create CommandResult
+XYZCommand -> CommandResult
+activate CommandResult
+
+CommandResult --> XYZCommand
+deactivate CommandResult
+
+XYZCommand --> LogicManager : r
+deactivate XYZCommand
+
+[<--LogicManager : Model
+deactivate LogicManager
+@enduml
