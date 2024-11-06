@@ -125,6 +125,7 @@
       "title": "User Guide",
       "headings": {
         "user-guide": "User Guide",
+        "introduction": "Introduction",
         "quick-start": "Quick start",
         "interacting-with-doctrack": "Interacting with DocTrack",
         "command-overview": "Command Overview",
