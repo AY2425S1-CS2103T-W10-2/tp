@@ -60,6 +60,8 @@
         "help-feature": "Help feature",
         "documentation-logging-testing-configuration-dev-ops": "Documentation, logging, testing, configuration, dev-ops",
         "appendix-data-storage-and-files": "Appendix: Data storage and files",
+        "appendix-parsing": "Appendix: Parsing",
+        "design-considerations-5": "Design considerations",
         "appendix-requirements": "Appendix: Requirements",
         "product-scope": "Product scope",
         "user-stories": "User stories",
@@ -81,7 +83,7 @@
         "saving-data": "Saving data",
         "appendix-planned-enhancements": "Appendix: Planned enhancements",
         "appendix-ui": "Appendix: UI",
-        "design-considerations-5": "Design considerations",
+        "design-considerations-6": "Design considerations",
         "appendix-effort": "Appendix: Effort"
       },
       "headingKeywords": {}
