@@ -54,7 +54,6 @@
         "implementation-of-entity-command-features": "Implementation of entity command features",
         "general-design-considerations": "General Design Considerations",
         "command-specific-design-considerations": "Command-Specific Design Considerations",
-        "add-appointment-feature": "Add Appointment feature",
         "implementation-of-general-command-features": "Implementation of general command features",
         "exit-feature": "Exit feature",
         "help-feature": "Help feature",

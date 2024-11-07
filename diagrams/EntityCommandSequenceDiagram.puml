@@ -18,15 +18,15 @@ LogicManager -> AddressBookParser : parseCommand("xyz")
 create CommandParser
 activate AddressBookParser
 AddressBookParser -> CommandParser
+
+note right of CommandParser: xyzCommandParser = \nFindCommandParser, \nAddCommandParser, \nDeleteCommandParser, \nEditCommandParser, \nClearCommandParser, \nListCommandParser
+
 activate CommandParser
 AddressBookParser <-- CommandParser
 deactivate CommandParser
 
-
-
 AddressBookParser -> CommandParser : parse("xyz")
 activate CommandParser
-
 
 create XYZCommand
 CommandParser -> XYZCommand

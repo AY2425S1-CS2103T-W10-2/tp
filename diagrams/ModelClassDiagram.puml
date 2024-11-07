@@ -21,11 +21,16 @@ Class Address
 Class Email
 Class Name
 Class Phone
+Class Status
 Class Tag
 
 Class UniqueAppointmentList
 Class Appointment
 Class AppointmentDescriptor
+Class AppointmentType
+Class DateTime
+Class Sickness
+Class Medicine
 
 Class I #FFFFFF
 }
@@ -51,12 +56,17 @@ PersonDescriptor *--> Name
 PersonDescriptor *--> Phone
 PersonDescriptor *--> Email
 PersonDescriptor *--> Address
+PersonDescriptor *--> Status
 PersonDescriptor *--> "*" Tag
 
 AppointmentBook *--> "1" UniqueAppointmentList
 UniqueAppointmentList --> "~* all" Appointment
 Appointment *--> "1" AppointmentDescriptor
-AppointmentDescriptor *--> Person
+Appointment *--> Person
+AppointmentDescriptor *--> AppointmentType
+AppointmentDescriptor *--> DateTime
+AppointmentDescriptor *-->"0..1" Sickness
+AppointmentDescriptor *-->"0..1" Medicine
 
 Appointment -[hidden]down--> I
 PersonDescriptor -[hidden]up--> I
