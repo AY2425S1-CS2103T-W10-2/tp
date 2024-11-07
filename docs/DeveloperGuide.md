@@ -125,10 +125,10 @@ The sequence diagram below illustrates the interactions within the `Logic` compo
 How the `Logic` component works:
 
 1. When `Logic` is called upon to execute a command, it is passed to an `AddressBookParser` object which in turn creates a parser that matches the command (e.g., `DeleteCommandParser`) and uses it to parse the command.
-1. This results in a `Command` object (more precisely, an object of one of its subclasses e.g., `DeleteCommand`) which is executed by the `LogicManager`.
-1. The command can communicate with the `Model` when it is executed (e.g. to delete a person).<br>
+2. This results in a `Command` object (more precisely, an object of one of its subclasses e.g., `DeleteCommand`) which is executed by the `LogicManager`.
+3. The command can communicate with the `Model` when it is executed (e.g. to delete a person).<br>
    Note that although this is shown as a single step in the diagram above (for simplicity), in the code it can take several interactions (between the command object and the `Model`) to achieve.
-1. The result of the command execution is encapsulated as a `CommandResult` object which is returned back from `Logic`.
+4. The result of the command execution is encapsulated as a `CommandResult` object which is returned back from `Logic`.
 
 Here are the other classes in `Logic` (omitted from the class diagram above) that are used for parsing a user command:
 
@@ -147,12 +147,12 @@ How the parsing works:
 
 The `Model` component,
 
-* with regards to `Person` objects:
+* In regard to `Person` objects:
   * stores the details of a person in a `PersonDescriptor` object
   * stores the `PersonDescriptor` object with a `personId` in the `Person` class.
   * stores the address book data i.e., all `Person` objects (which are contained in a `UniquePersonList` object).
   * stores the currently 'selected' `Person` objects (e.g., results of a search query) as a separate _filtered_ list which is exposed to outsiders as an unmodifiable `ObservableList<Person>` that can be 'observed' e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change.
-* with regards to `Appointment` objects:
+* In regard to `Appointment` objects:
   * stores the details of an appointment in a `AppointmentDescriptor` object
   * stores the `AppointmentDescriptor` object with a `appointmentId` in the `Appointment` class.
   * stores the address book data i.e., all `Appointment` objects (which are contained in a `UniqueAppointmentList` object).
@@ -217,110 +217,6 @@ The activity diagram shows the general sequence of steps when a user interacts w
 <br>
 
 --------------------------------------------------------------------------------------------------------------------
-
-<br>
-
-## **Implementation of main features**
-
-### Add person feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Edit person feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Delete person feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Find person feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### List person feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Clear person feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Add appointment feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Edit appointment feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Delete appointment feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Find appointment feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### List appointment feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
-### Clear appointment feature
-
-#### Implementation
-
-#### Design considerations
-
-<br>
-
----
-
-<br>
 
 ## Implementation of general features
 General commands include the `exit` and `help` commands.
@@ -692,22 +588,22 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 ### Non-Functional Requirements
 
-1.  Should work on any _mainstream OS_ as long as it has Java `17` or above installed.
-2.  Should work on any _reasonable system_ with good performance: common operation such as retrieving patient data must complete within 1 second, and complex operations must complete within 3 seconds.
-2.  Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
-3.  A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
-4.  Should not require installation
-5.  Must not operate with dependency on any remote server
-6.  No usage of DBMS
-7.  Main product file must not exceed 100MB
-8.  Documentation must not exceed 15MB
-9.  Product should be designed for typing-preferred consumers, offering a CLI experience
-10. Product should be designed for a single user.
-11. Product must function correctly on _standard resolutions_ and support scaling of 100%, 125%, 150%.
-12. Data must be persistent, with all changes saved immediately to local storage
-13. Data files must be in a format that can be edited manually by advanced users
-14. Data file must remain usable and intact even with invalid input from the application
-15. Errors must trigger clear, user-friendly messages
+1. Should work on any _mainstream OS_ as long as it has Java `17` or above installed.
+2. Should work on any _reasonable system_ with good performance: common operation such as retrieving patient data must complete within 1 second, and complex operations must complete within 3 seconds.
+3. Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.
+4. A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.
+5. Should not require installation
+6. Must not operate with dependency on any remote server
+7. No usage of DBMS
+8. Main product file must not exceed 100MB
+9. Documentation must not exceed 15MB
+10. Product should be designed for typing-preferred consumers, offering a CLI experience
+11. Product should be designed for a single user.
+12. Product must function correctly on _standard resolutions_ and support scaling of 100%, 125%, 150%.
+13. Data must be persistent, with all changes saved immediately to local storage
+14. Data files must be in a format that can be edited manually by advanced users
+15. Data file must remain usable and intact even with invalid input from the application
+16. Errors must trigger clear, user-friendly messages
 
 <br>
 
@@ -743,16 +639,16 @@ testers are expected to do more *exploratory* testing.
 
    1. Download the jar file and copy into an empty folder
 
-   1. Double-click the jar file Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
+   2. Double-click the jar file Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum.
 
-1. Saving window preferences
+2. Saving window preferences
 
    1. Resize the window to an optimum size. Move the window to a different location. Close the window.
 
-   1. Re-launch the app by double-clicking the jar file.<br>
+   2. Re-launch the app by double-clicking the jar file.<br>
        Expected: The most recent window size and location is retained.
 
-1. _{ more test cases …​ }_
+3. _{ more test cases …​ }_
 
 ### Adding a person
 
@@ -762,16 +658,16 @@ testers are expected to do more *exploratory* testing.
 
    1. Prerequisites: List all persons using the `list` command. Multiple persons in the list.
 
-   1. Test case: `delete 1`<br>
+   2. Test case: `delete 1`<br>
       Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.
 
-   1. Test case: `delete 0`<br>
+   3. Test case: `delete 0`<br>
       Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.
 
-   1. Other incorrect delete commands to try: `delete`, `delete x`, `...` (where x is larger than the list size)<br>
+   4. Other incorrect delete commands to try: `delete`, `delete x`, `...` (where x is larger than the list size)<br>
       Expected: Similar to previous.
 
-1. _{ more test cases …​ }_
+2. _{ more test cases …​ }_
 
 ### Editing a person
 
@@ -791,7 +687,7 @@ testers are expected to do more *exploratory* testing.
 
    1. _{explain how to simulate a missing/corrupted file, and the expected behavior}_
 
-1. _{ more test cases …​ }_
+2. _{ more test cases …​ }_
 
 <br>
 
