@@ -1098,6 +1098,15 @@ Team size: 5
    * **Sample Input:** User enters: `sort`
    * **Expected Output:** The result display box shows `Unknown Command. Did you mean: list, find, clear, add, edit, delete, exit, or help?`
 
+2. **Modify date parsing to check for leap years**
+* **Flaw:** When a user enters February 29 for a non-leap year, the date automatically adjusts to February 
+  28, which may be confusing.
+* **Enhancement:** Modify the date parsing logic to check for leap years.
+  * If the user enters February 29 for a non-leap year, display an error message indicating that the date is invalid. 
+  * If the user enters February 29 for a leap year, the date is accepted.
+* **Sample Input:** User enters `2023-02-29` for an appointment date.
+* **Expected Output:** The result display box shows `Invalid date: 2023 is not a leap year, so February 29 is not valid.`
+
 <br>
 
 --------------------------------------------------------------------------------------------------------------------

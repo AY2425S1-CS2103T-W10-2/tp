@@ -579,13 +579,13 @@ Note that this will also clear the appointment data.
 
 An **appointment** is defined by several fields. The fields and their corresponding prefixes are as follows:
 
-| Field               | Prefix | Optional | Multiple | Acceptable Inputs                     |
-|---------------------|--------|----------|----------|---------------------------------------|
-| **Person ID**       | `i/`   | No       | No       | Existing person ID                    |
-| **Appointment Type**| `ty/`  | No       | No       | Any value                             |
-| **Date and Time**   | `d/`   | No       | No       | `yyyy-MM-dd HH:mm`. Refer to 1. below |
-| **Sickness**        | `s/`   | Yes      | No       | At least one alphabetic character     |
-| **Medicine**        | `m/`   | Yes      | No       | At least one alphabetic character     |
+| Field                | Prefix | Optional | Multiple | Acceptable Inputs                         |
+|----------------------|--------|----------|----------|-------------------------------------------|
+| **Person ID**        | `i/`   | No       | No       | Existing person ID                        |
+| **Appointment Type** | `ty/`  | No       | No       | Any value                                 |
+| **Date and Time**    | `d/`   | No       | No       | `yyyy-MM-dd HH:mm`. Refer to **1.** below |
+| **Sickness**         | `s/`   | Yes      | No       | At least one alphabetic character         |
+| **Medicine**         | `m/`   | Yes      | No       | At least one alphabetic character         |
 
 <br>
 
@@ -604,6 +604,18 @@ margin-right: auto;">
 
 You can manage the appointments through different commands, which can be seen in the table below:
 
+<box type="info" light seamless>
+
+**Notes:**
+
+**1.** Acceptable inputs for **Date and Time**:
+* The time is in 24-hour format, i.e. `HH:mm` should be between `00:00` and `23:59`.
+* The date and time inputs are resolved "smartly" - meaning that certain incorrect dates will be allowed.<br> _**Example:**`2025-02-29 12:00` will be parsed as `2025-02-28 12:00`._
+
+</box>
+
+<br>
+
 | Action                                                                   | Format                                                                                                                   | Examples                                                              |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
 | **[Add appointment](#adding-an-appointment-add-appt)**                   | `add appt i/PERSON_ID d/DATE_TIME ty/APPOINTMENT_TYPE [s/SICKNESS] [m/MEDICINE]`                   <br/>           <br/> | `add appt i/1 d/2024-12-01 09:30 ty/Consulation s/Diabetes m/Insulin` |
@@ -620,7 +632,6 @@ You can manage the appointments through different commands, which can be seen in
 You can add an appointment to DocTrack. 
 
 **Format**: `add appt i/PERSON_ID ty/APPOINTMENT_TYPE d/DATE_TIME [s/SICKNESS] [m/MEDICINE]`
-- The format of `DATE_TIME` is `yyyy-MM-dd HH:mm`. For example, `2025-03-20 10:30`.
 
 <box type="tip" light>
 
@@ -635,7 +646,7 @@ You can add an appointment to DocTrack.
 <box type="info" light seamless>
 
 **Note:** Although you type `DATE_TIME` in the format `yyyy-MM-dd HH:mm`, you will see it displayed as `Month Date, Year, Time`. <br>
-_**Example:** You will see `2024-12-10 12:30` displayed as `December 10, 2024, 12:30 PM`._
+_**Example:** You will see `2024-12-10 14:30` displayed as `December 10, 2024, 2:30 PM`._
 
 </box>
 
@@ -986,6 +997,14 @@ computer?<br>
 **Q**: How do I back up my data?<br>
 **A**: Since the data is saved in the `addressbook.json` and `appointmentbook.json` files in the `data` 
 folder, you can copy these files to another location as a backup.
+
+<br>
+
+**Q**: How many patients and appointments does DocTrack support? <br>
+**A**: DocTrack technically supports up to 4 billion total **historical** patients and appointments. However,
+depending on your system, it might lag with larger numbers of patients and appointments. 
+We recommend that you do not exceed 10,000 total patients and appointments.
+
 
 <br><br>
 

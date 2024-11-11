@@ -125,7 +125,7 @@ public class UniqueAppointmentList implements Iterable<Appointment> {
      */
     public void removeAppointmentsForPerson(Person toRemove) {
         requireNonNull(toRemove);
-        internalList.removeIf(appointment -> appointment.getPerson().equals(toRemove));
+        internalList.removeIf(appointment -> appointment.getPersonId() == toRemove.getPersonId());
     }
 
     /**
