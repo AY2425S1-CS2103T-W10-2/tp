@@ -466,7 +466,7 @@ You can find person(s) whose **names** contain any of the given keywords.
 
 - `find person n/John` returns `john` and `John Doe` 
 - `find person n/alex david` returns `Alex Yeoh`, `David Li`<br><br>
-  ![result for 'find person alex david'](images/findAlexDavidResult.png)
+  <img src="images/findAlexDavidResult.png" alt="Find persons result" width="520px">
 
 <box style="background: #eeeeee">
 
@@ -561,13 +561,13 @@ An **appointment** is defined by several fields. The fields and their correspond
 | **Sickness**        | `s/`   | Yes      | No       | At least one alphabetic character     |
 | **Medicine**        | `m/`   | Yes      | No       | At least one alphabetic character     |
 
-You can manage the appointments through different commands, which can be seen in the table below:
-
 **Notes:**
 
 1. The date and time inputs are resolved "smartly" - meaning that certain incorrect dates will be allowed, e.g. `2025-02-29 12:00` will be parsed as `2024-02-28 12:00`. 
 
 <br>
+
+You can manage the appointments through different commands, which can be seen in the table below:
 
 | Action                                                                   | Format                                                                                                                   | Examples                                                              |
 |--------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|
@@ -658,10 +658,6 @@ You can an existing appointment in appointment book.
 
 - `edit appt 3 d/2024-12-05 13:00 m/Budesonide` edits the date and time and the medicine to be `2024-12-05 13:00` and `Budesonide` respectively.
 
-<br>
-
-<br>
-
 <box style="background: #eeeeee">
 
 **Navigate back to the subsections here:**
@@ -687,13 +683,7 @@ You can find appointments whose person names and / or dates contain any of the g
 **Examples**:
 - `find appt n/John` returns appointments with patients named `John`.
 - `find appt d/2024-12-05` returns appointments on `2024-12-05`.
-- `find appt n/John d/2024-12-05` returns appointments with patients named `John`, and is on `2024-12-05`.
-
-<br>
-
-![result for 'find appt John and 2024-12-05'](images/findApptExample.png)
-
-<br>
+- `find appt n/John d/2024-12-05` returns appointments with patients named `John`, and is on `2024-12-05`.<br><br>![result for 'find appt John and 2024-12-05'](images/findApptExample.png)
 
 <box type="tip" light>
 
