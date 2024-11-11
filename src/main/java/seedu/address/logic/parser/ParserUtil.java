@@ -175,7 +175,8 @@ public class ParserUtil {
         try {
             return LocalDateTime.parse(appointmentDateTime, formatter);
         } catch (DateTimeParseException e) {
-            throw new ParseException("Invalid date-time format. Expected format: yyyy-MM-dd HH:mm", e);
+            throw new ParseException("Invalid date-time format. "
+                    + "Expected format: yyyy-MM-dd HH:mm for example 2024-04-24 13:00 is 24th March 2024, 1:00 PM", e);
         }
     }
 
