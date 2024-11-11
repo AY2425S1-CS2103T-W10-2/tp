@@ -1092,7 +1092,11 @@ testers are expected to do more *exploratory* testing.
 ## **Appendix: Planned enhancements**
 Team size: 5
 
-1.
+1. **When an invalid command is entered, suggest possible valid commands.**
+   * **Flaw:** When a user types an unknown command, the result display box shows `Unknown Command`, which is not informative.
+   * **Enhancement:** The result display box will suggest possible valid commands for the user to enter.
+   * **Sample Input:** User enters: `sort`
+   * **Expected Output:** The result display box shows `Unknown Command. Did you mean: list, find, clear, add, edit, delete, exit, or help?`
 
 <br>
 
