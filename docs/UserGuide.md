@@ -1,7 +1,7 @@
 ---
   layout: default.md
-  title: "User Guide"
-  pageNav: 3
+    title: "User Guide"
+    pageNav: 3
 ---
 
 <br>
@@ -132,21 +132,21 @@ Having a problem? Read here to see some common issues that may arise while you a
 ## **Quick start**
 
 1. Ensure you have Java `17` or above installed in your computer.
-   - To install `Java 17`, download Java. Refer to the [guide for installing Java](https://docs.oracle.com/en/java/javase/17/install/overview-jdk-installation.html).
-     - Alternatively, download it from [here](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
-   - To check your Java version, refer [here](https://www.java.com/en/download/help/version_manual.html#).
+    - To install `Java 17`, download Java. Refer to the [guide for installing Java](https://docs.oracle.com/en/java/javase/17/install/overview-jdk-installation.html).
+        - Alternatively, download it from [here](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
+    - To check your Java version, refer [here](https://www.java.com/en/download/help/version_manual.html#).
 
 <br>
 
-2. You can download our latest release file from [here](https://github.com/AY2425S1-CS2103T-W10-2/tp/releases). It 
-   is a `.jar` file. For more information, you can refer to: 
-   - [What is a JAR file?](https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jarGuide.html)
-   - [How to run a JAR file](https://stackoverflow.com/questions/5774970/run-jar-file-in-command-prompt).
+2. You can download our latest release file from [here](https://github.com/AY2425S1-CS2103T-W10-2/tp/releases). It
+   is a `.jar` file. For more information, you can refer to:
+    - [What is a JAR file?](https://docs.oracle.com/javase/8/docs/technotes/guides/jar/jarGuide.html)
+    - [How to run a JAR file](https://stackoverflow.com/questions/5774970/run-jar-file-in-command-prompt).
 
 <br>
 
-3. Copy the file to the folder you want to use as the _home folder_ for your DocTrack application. 
-   - The DocTrack application will create a `data` folder in this _home folder_ to store your [data files](#faq).
+3. Copy the file to the folder you want to use as the _home folder_ for your DocTrack application.
+    - The DocTrack application will create a `data` folder in this _home folder_ to store your [data files](#faq).
 
 <br>
 
@@ -155,8 +155,8 @@ Having a problem? Read here to see some common issues that may arise while you a
     cd HOME_FOLDER
     java -jar DocTrack.jar
    ```
-    **_Example:_** if you copied `DocTrack.jar` into the folder `C:/Users/user/Documents`,
-    run the commands:
+   **_Example:_** if you copied `DocTrack.jar` into the folder `C:/Users/user/Documents`,
+   run the commands:
     ```
    cd C:/Users/user/Documents
    java -jar DocTrack.jar
@@ -172,13 +172,13 @@ Having a problem? Read here to see some common issues that may arise while you a
 
 6. Type the command in the command box, which is indicated by `Enter command here...`. Press `Enter` to execute it.<br>
    _**Example:** Typing **`help`** and pressing `Enter` will open the help window._<br>
-   
+
    Some other examples of commands you can enter:
-   * `list person` : Lists all contacts.
-   * `add person n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 st/recovering` : Adds a contact named `John Doe` to the Address Book.
-   * `delete person 3` : Deletes the 3rd contact shown in the current list.
-   * `clear person` : Deletes all contacts.
-   * `exit` : Exits the app.
+    * `list person` : Lists all contacts.
+    * `add person n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 st/recovering` : Adds a contact named `John Doe` to the Address Book.
+    * `delete person 3` : Deletes the 3rd contact shown in the current list.
+    * `clear person` : Deletes all contacts.
+    * `exit` : Exits the app.
 
 <br>
 
@@ -192,11 +192,11 @@ This would be a good time to run the `clear person` command, to start afresh wit
 
 <br>
 
-7. You can refer to the <a href="#command-overview" class="badge bg-primary">Command Overview</a> below for details of each command. 
+7. You can refer to the <a href="#command-overview" class="badge bg-primary">Command Overview</a> below for details of each command.
     * You can also go to the specific subsections:
-   <a href="#person-commands" class="badge bg-dark">Person commands</a>
-    <a href="#appointment-commands" class="badge bg-dark">Appointment commands</a>
-    <a href="#general-commands" class="badge bg-dark">General commands</a>
+      <a href="#person-commands" class="badge bg-dark">Person commands</a>
+      <a href="#appointment-commands" class="badge bg-dark">Appointment commands</a>
+      <a href="#general-commands" class="badge bg-dark">General commands</a>
 
 <br>
 
@@ -208,9 +208,9 @@ This would be a good time to run the `clear person` command, to start afresh wit
 
 ## **Interacting with DocTrack**
 
-All interactions with the DocTrack platform are done through a series of **commands** 
-(explained in <a href="#command-overview" class="badge bg-primary">Command Overview</a>) entered by you. 
-- These commands allow you to perform various **tasks**, such as adding, editing, listing, deleting, finding, and clearing persons/appointments. 
+All interactions with the DocTrack platform are done through a series of **commands**
+(explained in <a href="#command-overview" class="badge bg-primary">Command Overview</a>) entered by you.
+- These commands allow you to perform various **tasks**, such as adding, editing, listing, deleting, finding, and clearing persons/appointments.
 - The commands are designed to be flexible and user-friendly.
 
 <box type="tip" light>
@@ -221,7 +221,7 @@ Here are some **key points** to keep in mind when you are using the commands:
 - You should supply **all** the fields (words in **`UPPER_CASE`**) that are needed for a command.<br>
   _**Example:** In `add person n/NAME`, **`NAME`** is a field which can be used as `add person n/John Doe`._
 
-- The **`INDEX`** in command formats like `edit person INDEX` and `delete appt INDEX` refers to the index 
+- The **`INDEX`** in command formats like `edit person INDEX` and `delete appt INDEX` refers to the index
   number (shown beside the person or appointment) in the displayed list. The index **must be a positive integer i.e. 1, 2, 3...** <br>
   _**Example:** The index of the first person displayed at the top the list is `1`, the index of the second person displayed is `2`, and so on._
 
@@ -236,9 +236,9 @@ Here are some **key points** to keep in mind when you are using the commands:
 
 <box type="tip" theme="success" light style="border: 1px solid">
 
-**Tip:** 
+**Tip:**
 
-If you add extraneous fields for commands that do not take in fields (such as `help`, `list person`, 
+If you add extraneous fields for commands that do not take in fields (such as `help`, `list person`,
 `list appt`, `exit` and `clear`), they will be ignored. <br>
 _**Example:** If the command specifies `help 123`, then it will be interpreted as `help`._
 
@@ -333,10 +333,10 @@ A **person** is a patient with several fields. The fields and their correspondin
 **Notes:**
 
 **1.** The **email** must have
-*  a local part containing alphanumeric characters and specific symbols (such as `+` 
-  `_` `.` `-`) (not at the start or end), 
-* followed by `@`, and a domain part with labels separated by periods, 
-* ending in a label with at least two alphanumeric characters, 
+*  a local part containing alphanumeric characters and specific symbols (such as `+`
+   `_` `.` `-`) (not at the start or end),
+* followed by `@`, and a domain part with labels separated by periods,
+* ending in a label with at least two alphanumeric characters,
 * and no labels starting or ending with hyphens.
 
 </box>
@@ -348,7 +348,7 @@ The **PID** can be seen in the top right corner of their information card, as sh
 
 <br>
 
- You can also manage the patient information through different commands, which can be seen in the table below:
+You can also manage the patient information through different commands, which can be seen in the table below:
 
 | Action                                                      | Format                                                                                    | Examples                                                                                                       |
 |-------------------------------------------------------------|-------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
@@ -376,14 +376,14 @@ _**Example:** `t/friend t/likes coding` has 2 tags and it is valid._
 
 **Examples**:
 
-- `add person n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 st/recovering` 
+- `add person n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 st/recovering`
   adds a person named `John Doe` with phone number `98765432`, email `johnd@example.com`, and address `John street, block 123, #01-01`, and status `recovering`.
-- `add person n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 st/recovered t/criminal` adds a person named `Betsy Crowe` with email `betsycrowe@example.com`, address `Newgate 
+- `add person n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 st/recovered t/criminal` adds a person named `Betsy Crowe` with email `betsycrowe@example.com`, address `Newgate
   Prison`, phone number `1234567`, status `recovered`, and the tags `friend` and `criminal`.
 
 <box type="warning" light>
 
-**Note:** Ensure that you enter a **unique name (case-insensitive) and phone number** for the person you are adding. Else, it will be detected as a duplicate, and an error message will be shown. 
+**Note:** Ensure that you enter a **unique name (case-insensitive) and phone number** for the person you are adding. Else, it will be detected as a duplicate, and an error message will be shown.
 
 </box>
 
@@ -392,8 +392,8 @@ _**Example:** `t/friend t/likes coding` has 2 tags and it is valid._
 <box style="background: #eeeeee">
 
 **Navigate back to the subsections here:**
-<a href="#command-overview" class="badge bg-primary">Command overview</a> 
-<a href="#person-commands" class="badge bg-dark">Person commands</a> 
+<a href="#command-overview" class="badge bg-primary">Command overview</a>
+<a href="#person-commands" class="badge bg-dark">Person commands</a>
 <a href="#appointment-commands" class="badge bg-dark">Appointment commands</a>
 <a href="#general-commands" class="badge bg-dark">General commands</a>
 
@@ -442,9 +442,9 @@ Edits an existing patient in DocTrack.
 
 **Examples**:
 
-- `list person` followed by `edit person 1 p/91234567 e/johndoe@example.com` edits the phone number and email 
+- `list person` followed by `edit person 1 p/91234567 e/johndoe@example.com` edits the phone number and email
   address of the first person in the list to be `91234567` and `johndoe@example.com` respectively.
-- `list person` followed by `edit person 2 n/Betsy Crower t/` edits the name of the second person in the list to 
+- `list person` followed by `edit person 2 n/Betsy Crower t/` edits the name of the second person in the list to
   be `Betsy Crower` and clears all existing tags.
 
 <box type="info" light>
@@ -484,9 +484,9 @@ You can find person(s) whose **names** contain any of the given keywords.
 
 **Examples**:
 
-- `find person n/John` returns `john` and `John Doe` 
+- `find person n/John` returns `john` and `John Doe`
 - `find person n/alex david` returns `Alex Yeoh`, `David Li`<br><br>
-  <img src="images/findAlexDavidResult.png" alt="Find persons result" width="520px">
+  ![result for 'find person alex david'](images/findAlexDavidResult.png)
 
 <br>
 
@@ -550,7 +550,7 @@ You can delete all person entries from the patient book.
 
 <box type="warning" light>
 
-**Warning:** This action is irreversible. Ensure you have a backup of the patient data before clearing. 
+**Warning:** This action is irreversible. Ensure you have a backup of the patient data before clearing.
 Note that this will also clear the appointment data.
 
 </box>
@@ -589,18 +589,12 @@ An **appointment** is defined by several fields. The fields and their correspond
 
 <br>
 
-**Notes:**
-
-1. The date and time inputs are resolved "smartly" - meaning that certain incorrect dates will be allowed, e.g. `2025-02-29 12:00` will be parsed as `2025-02-28 12:00`. 
-
-  
 You can identify these appointments uniquely by their **Appointment ID (AID)** for easy reference.
 The **AID** can be seen in the top right corner of their information card, as shown below:<br><br>
-<img src="images/appointmentexample.png" width="480" style="display: block; margin-left: auto; 
+<img src="images/appointmentexample.png" width="480" style="display: block; margin-left: auto;
 margin-right: auto;">
 * The number indicated beside the appointment name is the **PID** of the person who has the appointment.
 
-<br>
 
 You can manage the appointments through different commands, which can be seen in the table below:
 
@@ -629,7 +623,7 @@ You can manage the appointments through different commands, which can be seen in
 
 ##### Adding an appointment: `add appt`
 
-You can add an appointment to DocTrack. 
+You can add an appointment to DocTrack.
 
 **Format**: `add appt i/PERSON_ID ty/APPOINTMENT_TYPE d/DATE_TIME [s/SICKNESS] [m/MEDICINE]`
 
@@ -773,7 +767,7 @@ You can delete a specified appointment from appointment book.
 **Examples**:
 
 - `list appt` followed by `delete appt 2` deletes the second appointment in the list of appointments.
-- `find appt d/2024-12-05` followed by `delete appt 1` deletes the first appointment in the results of the 
+- `find appt d/2024-12-05` followed by `delete appt 1` deletes the first appointment in the results of the
   `find` command.
 
 <box type="warning" light>
@@ -864,7 +858,7 @@ You will be able to view a help window that directs you to this user guide.
 
 ##### Exiting the program : `exit`
 
-You will be able to exit the DocTrack application. 
+You will be able to exit the DocTrack application.
 
 **Format**: `exit`
 
@@ -891,18 +885,18 @@ The data of the patients and appointments are saved in the hard disk automatical
 
 ##### Editing the data file
 
-For advanced users, feel free to update patient and appointment data directly by editing the [data files](#faq) in the 
+For advanced users, feel free to update patient and appointment data directly by editing the [data files](#faq) in the
 `data` folder. Learn more here: <a href="#faq" class="badge bg-warning">FAQs</a>.
 
 <box type="warning" light>
 
 **Caution:**
 
-- If your changes to the data file makes its format invalid, DocTrack will discard all data and start with an empty data file at the next run. Hence, it is recommended that you have a backup of the file before 
+- If your changes to the data file makes its format invalid, DocTrack will discard all data and start with an empty data file at the next run. Hence, it is recommended that you have a backup of the file before
   editing it.<br>
-- Furthermore, certain edits can cause DocTrack to behave in unexpected ways (e.g., if a value entered is outside the acceptable range). Therefore, you should edit the data file only if you are confident that you 
+- Furthermore, certain edits can cause DocTrack to behave in unexpected ways (e.g., if a value entered is outside the acceptable range). Therefore, you should edit the data file only if you are confident that you
   can update it correctly.
-</box>
+  </box>
 
 <br>
 
@@ -915,7 +909,7 @@ For advanced users, feel free to update patient and appointment data directly by
 ## **FAQ**
 
 **Q**: How is my data stored?<br>
-**A**: Your data is stored in [.json](https://www.json.org/json-en.html) files, located in the `data` 
+**A**: Your data is stored in [.json](https://www.json.org/json-en.html) files, located in the `data`
 folder. The details of the persons are stored in the `addressbook.json` file, while the appointments are stored in the `appointmentbook.json` file.
 
 Examples:
@@ -978,13 +972,13 @@ An example of how the appointments are stored in the `appointmentbook.json` file
 ```
 <br><br>
 
-**Q**: How do I transfer my data (in the `addressbook.json` and `appointmentbook.json` files) to another 
+**Q**: How do I transfer my data (in the `addressbook.json` and `appointmentbook.json` files) to another
 computer?<br>
-**A**: 
+**A**:
 1. Save the `addressbook.json` and `appointmentbook.json` files from the `data` folder in your current computer.
-2. [Install the DocTrack app](#quick-start) in the other computer. 
-3. When you run DocTrack, it creates empty [.json](https://www.json.org/json-en.html) files in the `data` 
-   folder. 
+2. [Install the DocTrack app](#quick-start) in the other computer.
+3. When you run DocTrack, it creates empty [.json](https://www.json.org/json-en.html) files in the `data`
+   folder.
 4. Replace these empty files with the `addressbook.json` and `appointmentbook.json` files you saved from your previous computer.
 
 <br>
@@ -995,14 +989,14 @@ computer?<br>
 <br>
 
 **Q**: How do I back up my data?<br>
-**A**: Since the data is saved in the `addressbook.json` and `appointmentbook.json` files in the `data` 
+**A**: Since the data is saved in the `addressbook.json` and `appointmentbook.json` files in the `data`
 folder, you can copy these files to another location as a backup.
 
 <br>
 
 **Q**: How many patients and appointments does DocTrack support? <br>
 **A**: DocTrack technically supports up to 4 billion total **historical** patients and appointments. However,
-depending on your system, it might lag with larger numbers of patients and appointments. 
+depending on your system, it might lag with larger numbers of patients and appointments.
 We recommend that you do not exceed 10,000 total patients and appointments.
 
 
