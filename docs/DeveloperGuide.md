@@ -1059,8 +1059,8 @@ testers are expected to do more *exploratory* testing.
         - For a simple example, use the appointment added in the test case for adding a person.
     2. Test case:`find appt n/[NAME]`
     3. Expected: The list is updated to show all the appointments with names containing "[NAME]", non-case-sensitive.
-    - The status bar shows the following: "Found `n` appointments".
-   - The `n` refers to the amount of appointment for people with names containing "elmo".
+    - The status bar shows the following: "Found `x` appointments".
+   - The `x` refers to the amount of appointment for people with names containing "elmo".
     - The list of appointments should now only show appointments matching the criteria.
 
 ### Clearing person list
