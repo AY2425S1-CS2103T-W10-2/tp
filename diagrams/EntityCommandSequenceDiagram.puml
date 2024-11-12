@@ -35,9 +35,13 @@ activate XYZCommand
 note right of XYZCommand: XYZCommand = \nFindEntityCommand, \nAddEntityCommand, \nDeleteEntityCommand, \nEditEntityCommand, \nClearEntityCommand, \nListEntityCommand
 
 XYZCommand --> CommandParser
+deactivate XYZCommand
+
 CommandParser --> AddressBookParser
 deactivate CommandParser
-deactivate XYZCommand
+'Hidden arrow to position the destroy marker below the end of the activation bar.
+CommandParser -[hidden]-> AddressBookParser
+destroy CommandParser
 
 AddressBookParser --> LogicManager : e
 deactivate AddressBookParser
